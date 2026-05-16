@@ -60,13 +60,13 @@ object Build1 : BuildType({
             userSettingsSelection = "settings.xml"
         }
         maven {
-            name = "Run tests"
+            name = "maven deploy"
             id = "Run_tests"
 
             conditions {
-                doesNotEqual("teamcity.build.branch", "master")
+                equals("teamcity.build.branch", "master")
             }
-            goals = "clean test"
+            goals = "clean deploy"
             userSettingsSelection = "settings.xml"
         }
     }
