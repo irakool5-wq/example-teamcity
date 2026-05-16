@@ -40,5 +40,5 @@ public void testGetHunterReplyContainsHunter() {
     assertNotNull(reply);
     assertTrue("Reply must contain 'hunter'", 
                reply.toLowerCase().contains("hunter"));
-}
+	}
 }
